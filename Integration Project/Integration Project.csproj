@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\LoginStyle.css" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="HTML\Login.html" />
     <Content Include="PHP\Login.php" />
     <Content Include="Web.config" />
