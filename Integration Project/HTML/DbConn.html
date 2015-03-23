@@ -5,8 +5,6 @@
 </head>
 <body>
     <script>
-        console.log("whaaat");
-        
 
         var db = openDatabase('myDb', '1.0', 'Test DB', 2 * 1024 * 1024);
         createTabellen();
@@ -15,7 +13,7 @@
 
         function createTabellen() {
             db.txaction(function (tx) {
-                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO user (userId INTEGER NOT NULL PRIMARY KEY, userName TEXT NOT NULL, password TEXT NOT NULL)');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS user (userId INTEGER NOT NULL PRIMARY KEY, userName TEXT NOT NULL, password TEXT NOT NULL)');
             });
         }
 
