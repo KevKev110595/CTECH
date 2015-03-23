@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        console.log("whaaat");
+        
+
+        var db = openDatabase('myDb', '1.0', 'Test DB', 2 * 1024 * 1024);
+        createTabellen();
+        test();
+        getResults();
+
+        function createTabellen() {
+            db.txaction(function (tx) {
+                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO user (userId INTEGER NOT NULL PRIMARY KEY, userName TEXT NOT NULL, password TEXT NOT NULL)');
+            });
+        }
+
+        function test() {
+            db.txaction(function (tx) {
+                tx.executeSql('INSERT INTO user (154, "EmeryTEST", "TESTpw")');
+            });
+        }
+                
+    </script>
+
+</body>
+</html>
